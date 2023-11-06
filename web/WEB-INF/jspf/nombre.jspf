@@ -1,0 +1,101 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<sectio class="navegacion"> <h1>OFFERLINK</h1> <h3 class="cargador"><span class="letra">U</span><span class="letra">P</span><span class="letra">G</span><span class="letra">R</span><span class="letra">A</span><span class="letra">D</span><span class="letra">E</span><span class="letra">&nbsp;</span><span class="letra">y</span><span class="letra">o</span><span class="letra">u</span><span class="letra">r</span><span class="letra">&nbsp;</span><span class="letra">T</span><span class="letra">E</span><span class="letra">C</span><span class="letra">H</span><span class="letra">N</span><span class="letra">O</span><span class="letra">L</span><span class="letra">O</span><span class="letra">G</span><span class="letra">Y</span></h3> </sectio>
+<canvas class="fondo"></canvas>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: "ROBOTO", sans-serif;
+    }
+    .navegacion, .deslizador {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        background-color: #1e1f26;
+        text-align: center;
+        padding: 0 2em;
+    }
+    .navegacion h1, .deslizador h1 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 5vw;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        letter-spacing: 0.5rem;
+        color: #03dac6;
+        transition: all 0.3s ease;
+        z-index: 3;
+    }
+    h1:hover {
+        transform: translate3d(0, -10px, 22px);
+        color: #ff0266;
+    }
+    .deslizador h2 {
+        font-size: 2vw;
+        letter-spacing: 0.3rem;
+        font-family: "ROBOTO", sans-serif;
+        font-weight: 300;
+        color: #faebd7;
+        z-index: 4;
+    }
+    h3.cargador {
+        font-size: 2vw;
+        letter-spacing: 0.7em;
+        font-family: "ROBOTO", sans-serif;
+        font-weight: 300;
+        color: #faebd7;
+        z-index: 4;
+    }
+    span:hover {
+        color: #ff0266;
+        font-weight: 500;
+        font-size: 2.2vw;
+    }
+    a {
+        text-decoration: none;
+    }
+    @media (min-width: 800px) {
+        .navegacion h1, .deslizador h1 {
+            font-size: 5vw;
+        }
+        .navegacion h2, .deslizador h2 {
+            font-size: 3vw;
+        }
+        .tab-navegacion {
+            font-size: 3vw;
+        }
+    }
+    .fondo {
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+    .cargador span {
+        color: #faebd7;
+        text-shadow: 0 0 0 #faebd7;
+        -webkit-animation: carga 1s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes carga {
+        to {
+            text-shadow: 20px 0 70px #ff0266;
+            color: #ff0266;
+        }
+    } /* Animaciones */
+    .cargador span:nth-child(2) {
+        -webkit-animation-delay: 0.1s;
+    } /* más spans */ </style> 
+
+
+ 

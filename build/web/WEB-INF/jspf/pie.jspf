@@ -1,0 +1,35 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <a href="./index.jsp"><img src="./IMG/nombre.png" style="height:3.5em"></a>
+          <p>Los Sauces LT J4, San Juan de Lurigancho 15434</p>
+          <p>Lima: (01) 625-8000</p>
+          <p>OfferLink@hotmail.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces Rápidos:</h5>
+          <ul class="list-unstyled">
+            <li><a href="./nosotros.jsp">Nosotros</a></li>
+            <li><a href="#">Puestos de trabajo</a></li>
+            <li><a href="#">Nuestra Política</a></li>
+            <li><a href="./contacto.jsp">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Síguenos en Redes Sociales</h5>
+          <a href="#" class="social-icons"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icons"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-icons"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icons"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center">&copy; 2023 OfferLink. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>

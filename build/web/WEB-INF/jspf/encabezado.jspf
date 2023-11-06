@@ -1,0 +1,118 @@
+
+<%@ page pageEncoding="UTF-8" %>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./index.jsp">
+          <img src="IMG/Logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+          <img src="IMG/nombre.png" alt="Logo" height="35" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bg-dark text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./controlador?accion=inico">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.jsp">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.jsp">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="controlador?accion=listar">Agregar Producto</a>
+            </li> 
+            <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="modal" data-bs-target="#userModal">
+              <i class="bi bi-person"></i> Usuario
+            </button>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="ControladorCar?accion=Carrito">
+                  <i class="bi bi-cart3"></i>(<label style="color:darkorange">${contador}</label>)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+              
+    <!-- Modal de Usuario -->
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">OfferLink</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="loginForm" method="POST" action="ControladorUsuario?accion=inciarSesion">
+            <h3>Iniciar Sesión</h3>
+            <!-- Formulario de Inicio de Sesión -->
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email:</label>
+              <input type="email" name="email" class="form-control" id="loginEmail" placeholder="Tu Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña:</label>
+              <input type="password" name="password" class="form-control" id="loginPassword" placeholder="Tu Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+            <div class="mt-3 text-center">
+              ¿Todavía no tienes cuenta? <a href="#" id="signupLink">Regístrate aquí</a>
+            </div>
+          </form>
+            <form id="registerForm" style="display:none;" method="POST" action="ControladorUsuario?accion=registrar">
+            <h3>Registro</h3>
+            <!-- Formulario de Registro -->
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Nombre:</label>
+              <input type="text" name="nombre" class="form-control" id="registerName" placeholder="Tu Nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerDni" class="form-label">DNI:</label>
+              <input type="text" name="dni" class="form-control" id="registerDni" placeholder="Tu DNI" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerAddress" class="form-label">Dirección:</label>
+              <input type="text" name="direccion" class="form-control" id="registerAddress" placeholder="Tu Dirección" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email:</label>
+              <input type="email" name="email" class="form-control" id="registerEmail" placeholder="Tu Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Contraseña:</label>
+              <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Tu Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+            <div class="mt-3 text-center">
+              ¿Ya tienes una cuenta? <a href="#" id="loginLink">Iniciar Sesión</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cambiar entre formularios de inicio de sesión y registro
+    document.getElementById("signupLink").addEventListener("click", function (event) {
+      event.preventDefault(); // Evitar que la página se recargue al hacer clic en el enlace
+      document.getElementById("loginForm").style.display = "none"; // Ocultar formulario de inicio de sesión
+      document.getElementById("registerForm").style.display = "block"; // Mostrar formulario de registro
+    });
+
+    document.getElementById("loginLink").addEventListener("click", function (event) {
+      event.preventDefault(); // Evitar que la página se recargue al hacer clic en el enlace
+      document.getElementById("registerForm").style.display = "none"; // Ocultar formulario de registro
+      document.getElementById("loginForm").style.display = "block"; // Mostrar formulario de inicio de sesión
+    });
+  </script>
+              
+  </header>

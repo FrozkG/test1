@@ -1,0 +1,308 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">COMENTARIOS</h1>
+</div>
+<div class="pop">
+
+</div>
+
+<div class="testimonios">
+
+    <div class="contenedor activo">
+        <div class="imagen">
+            <img src="https://cursos.ulpik.com/wp-content/uploads/2023/01/F76E3765-7112-878A-A15C-2F746677C29A.jpeg">
+        </div>
+        <div class="descripcion">
+            <span>Gustavo Carrillo</span>
+            <span>Emprendedor</span>
+            <span>"Me quedo impresionado por la calidad de los productos de OfferLink. Siempre encuentro las últimas novedades en componentes de computadoras a precios competitivos. Su servicio al cliente es excepcional y su plataforma en línea es fácil de usar. ¡No puedo recomendarlos lo suficiente!"</span>
+        </div>
+    </div>
+
+
+
+
+    <div class="contenedor oculto">
+        <div class="imagen">
+            <img src="https://cursos.ulpik.com/wp-content/uploads/2023/01/7A847109-23A9-5851-1CA0-A0B8502677AC.jpeg">
+        </div>
+        <div class="descripcion">
+            <span>Juan Pablo Guerra</span>
+            <span>Gerente General UCACSUR </span>
+            <span>"OfferLink ha sido mi fuente confiable para actualizar mi equipo informático. Sus ofertas son inmejorables y el proceso de compra es sencillo. Cada vez que he tenido una pregunta, su equipo de soporte ha sido rápido y útil. ¡Una empresa en la que puedes confiar!"</span> 
+        </div>
+    </div>
+
+
+
+    <div class="contenedor oculto">
+        <div class="imagen">
+            <img src="https://cursos.ulpik.com/wp-content/uploads/2022/07/Captura_de_Pantalla_2021-08-16_a_la_s_16.16.28_1x.png">
+        </div>
+        <div class="descripcion">
+            <span>Carlos Sánchez</span>
+            <span>Emprendedor</span>
+            <span>"La experiencia de compra en OfferLink es excepcional. La variedad de productos es asombrosa y siempre encuentro lo que necesito. La entrega es rápida y confiable. Lo que más me impresiona es su compromiso con la calidad. Ofrecen los mejores componentes a precios asequibles."</span>
+        </div>
+    </div>
+
+
+
+    <div class="contenedor oculto">
+        <div class="imagen">
+            <img src="https://cursos.ulpik.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-12-at-7.36.31-AM.jpeg">
+        </div>
+        <div class="descripcion">
+            <span>Mateo Moreno</span>
+            <span>Emprendedor</span>
+            <span>"OfferLink es mi elección número uno para componentes de computadoras. La calidad de sus productos es sobresaliente, y siempre encuentro ofertas increíbles. La plataforma es intuitiva y fácil de navegar. Además, su servicio al cliente es amable y eficiente. Una empresa que realmente se preocupa por sus clientes."</span>
+        </div>
+    </div>
+
+
+
+    <div class="contenedor oculto">
+        <div class="imagen">
+            <img src="https://cursos.ulpik.com/wp-content/uploads/2022/07/testimonio-3-red_1x.jpg">
+        </div>
+        <div class="descripcion">
+            <span>Felipe Pesántez</span>
+            <span>Gerente General UCACSUR </span>
+            <span>"Ofertas inigualables y un servicio excepcional: eso es lo que ofrece OfferLink. Me han ayudado a mejorar mi configuración de PC sin romper mi presupuesto. Su sitio web es una delicia de usar, y la entrega es siempre puntual. Ofrecen una experiencia de compra superior en el mundo de la tecnología."</span>
+        </div>
+    </div>
+
+    <ul class="lista">
+
+        <li class="play" >
+            ▶️
+        </li>
+
+        <li class="pause" >
+            ⏸️
+        </li>
+    </ul>
+
+
+
+
+
+</div>
+
+
+<style>
+    .lista{
+        display:block;
+        list-style:none;
+        width:100%;
+        margin: 0 auto;
+        text-align:center;
+    }
+
+    .lista li{
+        color:white;
+        display:inline-block;
+        width:32px;
+        height:32px;
+        background-color:#000;
+        margin: 5px;
+        font-size:32px;
+    }
+
+    .play{
+        display:none;
+    }
+
+    .testimonios{
+        z-index: 1000;
+        /*   background-color:red; */
+        height:400px;
+        width:100%;
+        padding:25px;
+    }
+
+    .activo{
+        display: grid;
+    }
+
+    .oculto{
+        display:none;
+    }
+
+    .contenedor{
+        grid-template-columns: 120px auto;
+
+        margin: 25px auto;
+        grid-template-rows: auto;
+        max-width: 700px;
+        min-width: 300px;
+        padding:20px;
+
+        border: 1px solid #000;
+        cursor: pointer;
+        -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    .contenedor:hover{
+        background-color:#eeeeee;
+    }
+    .add{
+        border:none;
+    }
+
+    .descripcion{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .descripcion span:first-child{
+        padding-left:20px;
+        text-transform:uppercase;
+        font-size: 20px;
+    }
+
+    .descripcion span:nth-child(2){
+        padding-left:20px;
+        font-size:15px;
+    }
+
+    .descripcion span:nth-child(3){
+        padding:20px;
+        font-size:16px;
+        text-align:justify;
+    }
+
+    .imagen{
+        width: 100px;
+        height: 100px;
+        background-color:white;
+        border-radius: 100%;
+        border: 5px solid white;
+    }
+
+    .imagen img{
+        width: 100px;
+        height: 100px;
+        background-color:white;
+        border-radius: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .contenedor{
+            grid-template-columns: auto;
+            grid-template-rows: 120px auto;
+        }
+
+        .imagen{
+            margin: 0 auto;
+        }
+
+        .descripcion span:first-child{
+            margin: 0 auto;
+        }
+
+        .descripcion span:nth-child(2){
+            margin: 0 auto;
+        }
+    }
+
+
+    @-webkit-keyframes flip-in-hor-bottom {
+        0% {
+            -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes scale-in-center {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes scale-in-center {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+</style>
+<script>
+    let bandera = false;
+    let i = 0;
+    let time = 5000;
+    let slide = true;
+    const punto = document.querySelectorAll('.contenedor')
+    const playList = document.querySelector('.play');
+    const pauseList = document.querySelector('.pause');
+    console.log(playList)
+    console.log(pauseList)
+// clearInterval(refreshId);
+
+    move()
+    let clickPlay = playList.addEventListener('click', move)
+
+    function move() {
+        let slideInterval = setInterval(() => {
+
+            let clickPause = pauseList.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                let i = 0;
+            })
+
+
+            if (i === 4) {
+                punto[i].classList.remove('activo')
+                punto[i].classList.add('oculto')
+                i = 0;
+            }
+
+            if (bandera === false) {
+                punto[i].classList.remove('activo')
+                punto[i].classList.add('oculto')
+
+
+                punto[i + 1].classList.remove('oculto')
+                punto[i + 1].classList.add('activo')
+
+                bandera = true;
+                i = i + 1;
+
+            } else {
+
+                punto[i].classList.remove('oculto')
+                punto[i].classList.add('activo')
+                bandera = false;
+
+            }
+
+
+        }, time);
+
+    }
+</script>
